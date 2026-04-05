@@ -1,0 +1,20 @@
+/* Main CSS Entry Point */
+/* @import '.variables.css'; */
+@import './layout.css';
+@import './components.css';
+@import './auth.css';
+@import './dashboard.css';
+@import './feed.css';
+@import './forms.css';
+@import './responsive.css';
+@import './student-dashboard.css'; 
+@import './rewards.css';
+@import './theme.css'; 
+@import './home.css';
+@import './student-components.css';
+@import './footer.css';
+@import './loader.css';
+@import './navbar.css';
+@import './admin.css'; 
+@import './faculty.css';
+@import './layout.css';

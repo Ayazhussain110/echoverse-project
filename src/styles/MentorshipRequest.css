@@ -1,0 +1,276 @@
+/* ==================== Mentorship Page Additional Styles ==================== */
+
+/* Two Column Layout */
+.mentorship-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+/* Faculty Section */
+.faculty-section {
+  background: var(--theme-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: var(--space-8);
+  color: var(--theme-text-secondary);
+}
+
+/* Faculty Stats */
+.faculty-stats {
+  display: flex;
+  gap: var(--space-3);
+  margin: var(--space-2) 0;
+  font-size: 0.75rem;
+}
+
+.rating {
+  color: #f59e0b;
+}
+
+.students {
+  color: var(--theme-text-secondary);
+}
+
+/* Avatar Placeholder */
+.avatar-placeholder {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--theme-primary), var(--theme-primary-dark));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Unavailable Overlay */
+.faculty-card {
+  position: relative;
+}
+
+.faculty-card.unavailable {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.unavailable-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unavailable-overlay span {
+  background: var(--danger);
+  color: white;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  transform: rotate(-15deg);
+}
+
+/* Requests Section */
+.requests-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Selected Faculty Info */
+.selected-faculty-info {
+  background: var(--gray-100);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+.selected-faculty-info p {
+  font-size: 0.875rem;
+  margin-bottom: var(--space-1);
+}
+
+.selected-faculty-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+  margin-top: var(--space-4);
+}
+
+/* My Requests Section */
+.my-requests {
+  background: var(--theme-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+
+.my-requests h3 {
+  margin-bottom: var(--space-4);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.no-requests {
+  text-align: center;
+  padding: var(--space-6);
+  color: var(--theme-text-secondary);
+}
+
+.no-requests p:first-child {
+  margin-bottom: var(--space-2);
+}
+
+/* Requests List */
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.request-card {
+  background: var(--gray-50);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--theme-primary);
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.request-header h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--theme-text);
+}
+
+.request-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 0.75rem;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+}
+
+.request-status.pending {
+  background: #fed7aa;
+  color: #92400e;
+}
+
+.request-status.approved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.request-status.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.request-details {
+  font-size: 0.75rem;
+  color: var(--theme-text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.request-message {
+  font-size: 0.875rem;
+  color: var(--theme-text);
+  margin-bottom: var(--space-2);
+  line-height: 1.4;
+}
+
+.request-date {
+  font-size: 0.7rem;
+  color: var(--gray-400);
+}
+
+/* Mentorship Tips */
+.mentorship-tips {
+  background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-6);
+}
+
+.mentorship-tips h3 {
+  margin-bottom: var(--space-3);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--theme-primary-dark);
+}
+
+.mentorship-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mentorship-tips li {
+  padding: var(--space-2) 0;
+  padding-left: var(--space-6);
+  position: relative;
+  color: var(--theme-text);
+  font-size: 0.875rem;
+}
+
+.mentorship-tips li::before {
+  content: '💡';
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mentorship-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .requests-section {
+    order: 2;
+  }
+  
+  .faculty-section {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .request-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .mentorship-tips li {
+    font-size: 0.75rem;
+  }
+}

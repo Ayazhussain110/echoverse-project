@@ -1,0 +1,454 @@
+/* Rewards Page Styles */
+
+.rewards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header Section */
+.rewards-header {
+  margin-bottom: var(--space-6);
+}
+
+.rewards-header h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.rewards-header p {
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+/* Points Card */
+.points-card {
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  color: white;
+  margin-bottom: var(--space-6);
+  box-shadow: var(--shadow-lg);
+}
+
+.points-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.points-icon {
+  font-size: 2.5rem;
+}
+
+.points-header h3 {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  margin-bottom: var(--space-1);
+}
+
+.points-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.rank-info {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+/* Level Progress */
+.level-progress {
+  margin-top: var(--space-4);
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: var(--space-2);
+}
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.stat-card {
+  background: white;
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+  color: var(--primary-600);
+}
+
+.stat-card h4 {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  margin-bottom: var(--space-1);
+}
+
+.stat-card p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+/* Achievements Section */
+.achievements-section {
+  margin-bottom: var(--space-6);
+}
+
+.achievements-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  color: var(--gray-800);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.achievement-card {
+  background: white;
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  display: flex;
+  gap: var(--space-3);
+  border: 1px solid var(--gray-200);
+  transition: all var(--transition-fast);
+}
+
+.achievement-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.achievement-card.completed {
+  border-left: 4px solid var(--success);
+  background: linear-gradient(135deg, white, #f0fdf4);
+}
+
+.achievement-card.locked {
+  opacity: 0.7;
+  filter: grayscale(0.2);
+}
+
+.achievement-icon {
+  font-size: 2rem;
+}
+
+.achievement-info {
+  flex: 1;
+}
+
+.achievement-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+  color: var(--gray-800);
+}
+
+.achievement-info p {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  margin-bottom: var(--space-2);
+}
+
+.completed-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 0.75rem;
+  color: var(--success);
+}
+
+/* Small Progress Bar */
+.progress-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.small-progress-bar {
+  flex: 1;
+  background: var(--gray-200);
+  border-radius: var(--radius-full);
+  height: 4px;
+  overflow: hidden;
+}
+
+.small-progress-fill {
+  height: 100%;
+  background: var(--primary-600);
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+.progress-info span {
+  font-size: 0.7rem;
+  color: var(--gray-500);
+}
+
+/* Recent Rewards */
+.recent-rewards {
+  margin-bottom: var(--space-6);
+}
+
+.recent-rewards h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  color: var(--gray-800);
+}
+
+.rewards-list {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.reward-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--gray-100);
+  transition: all var(--transition-fast);
+}
+
+.reward-item:hover {
+  background: var(--gray-50);
+}
+
+.reward-item:last-child {
+  border-bottom: none;
+}
+
+.reward-icon {
+  font-size: 1.5rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+}
+
+.reward-info {
+  flex: 1;
+}
+
+.reward-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+  color: var(--gray-800);
+}
+
+.reward-info p {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.reward-points {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+/* Internship Section */
+.internship-section {
+  margin-bottom: var(--space-6);
+}
+
+.internship-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--gray-800);
+}
+
+.internship-desc {
+  color: var(--gray-500);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-4);
+}
+
+.internship-card {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  gap: var(--space-4);
+  border: 1px solid #fcd34d;
+}
+
+.internship-icon {
+  font-size: 3rem;
+}
+
+.internship-info {
+  flex: 1;
+}
+
+.internship-info h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #92400e;
+  margin-bottom: var(--space-2);
+}
+
+.internship-info p {
+  font-size: 0.875rem;
+  color: #b45309;
+  margin-bottom: var(--space-3);
+}
+
+.internship-requirements {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.requirement {
+  background: rgba(255, 255, 255, 0.5);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-lg);
+  font-size: 0.875rem;
+}
+
+.requirement span {
+  color: #92400e;
+  margin-right: var(--space-2);
+}
+
+.requirement strong {
+  color: #b45309;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rewards-container {
+    padding: var(--space-4);
+  }
+
+  .points-card {
+    padding: var(--space-4);
+  }
+
+  .points-value {
+    font-size: 2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reward-item {
+    flex-wrap: wrap;
+  }
+
+  .internship-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .internship-requirements {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rank-info {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .points-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reward-points {
+    width: 100%;
+    text-align: right;
+  }
+}
+
+/* Animation for new rewards */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.reward-item.new {
+  animation: pulse 0.5s ease-in-out;
+}

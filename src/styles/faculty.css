@@ -1,0 +1,561 @@
+/* ==================== Faculty Dashboard Styles ==================== */
+
+.faculty-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: var(--gray-50);
+}
+
+.faculty-badge {
+  padding: var(--space-1) var(--space-3);
+  background: var(--primary-100);
+  color: var(--primary-700);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Faculty Header */
+.faculty-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.faculty-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--theme-text);
+}
+
+/* Faculty Stats */
+.faculty-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+/* Appointment Tabs */
+.appointments-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  border-bottom: 1px solid var(--gray-200);
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: var(--space-2) var(--space-4);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  border-bottom: 2px solid transparent;
+}
+
+.tab-btn.active {
+  color: var(--theme-primary);
+  border-bottom-color: var(--theme-primary);
+}
+
+/* Appointments List */
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.appointment-item {
+  background: var(--theme-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  border-left: 4px solid;
+}
+
+.appointment-item.status-pending { border-left-color: #f59e0b; }
+.appointment-item.status-approved { border-left-color: #10b981; }
+.appointment-item.status-completed { border-left-color: #3b82f6; }
+.appointment-item.status-rejected { border-left-color: #ef4444; }
+
+.appointment-info {
+  flex: 1;
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.info-icon {
+  color: var(--theme-primary);
+}
+
+.student-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.student-info p {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.appointment-details {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-2);
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.appointment-details span {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.student-message {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  font-style: italic;
+  margin-top: var(--space-2);
+}
+
+.appointment-actions {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-approve {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.btn-reject {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.btn-complete {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+/* Faculty Modal */
+.faculty-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-content h3 {
+  margin-bottom: var(--space-4);
+}
+
+/* Availability Styles */
+.availability-list {
+  margin-bottom: var(--space-4);
+}
+
+.availability-day {
+  margin-bottom: var(--space-3);
+  padding: var(--space-2);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.availability-day h4 {
+  margin-bottom: var(--space-2);
+  font-size: 0.875rem;
+}
+
+.time-slots {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.time-slot {
+  background: var(--primary-100);
+  color: var(--primary-700);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+}
+
+.add-slot {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.add-slot select,
+.add-slot input {
+  padding: var(--space-2);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+}
+
+/* Calendar Styles */
+.faculty-calendar {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.calendar-nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-1);
+  border-radius: var(--radius-md);
+}
+
+.calendar-nav button:hover {
+  background: var(--gray-100);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-1);
+}
+
+.calendar-weekday {
+  padding: var(--space-2);
+  text-align: center;
+  font-weight: 600;
+  background: var(--gray-100);
+  border-radius: var(--radius-md);
+}
+
+.calendar-day {
+  min-height: 100px;
+  padding: var(--space-2);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  position: relative;
+}
+
+.calendar-day.empty {
+  background: var(--gray-50);
+}
+
+.calendar-day.today {
+  background: var(--primary-50);
+  border-color: var(--theme-primary);
+}
+
+.day-number {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.day-appointments {
+  margin-top: var(--space-2);
+}
+
+.day-appointment {
+  font-size: 0.7rem;
+  background: var(--primary-100);
+  padding: 2px 4px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.upcoming-appointments {
+  margin-top: var(--space-6);
+}
+
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.upcoming-item {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.upcoming-date {
+  min-width: 120px;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.upcoming-info strong {
+  display: block;
+  font-size: 0.875rem;
+}
+
+/* Announcements */
+.announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.announcement-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+
+.announcement-card.pinned {
+  background: linear-gradient(135deg, white, var(--primary-50));
+  border-left: 4px solid var(--theme-primary);
+}
+
+.announcement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.announcement-header h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.announcement-meta {
+  display: flex;
+  gap: var(--space-3);
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.announcement-meta span {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.announcement-content {
+  color: var(--gray-700);
+  margin-bottom: var(--space-3);
+  line-height: 1.5;
+}
+
+.announcement-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.action-btn.pin {
+  color: var(--warning);
+}
+
+/* Faculty Profile */
+.profile-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--space-6);
+}
+
+.profile-sidebar {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-avatar-large {
+  width: 120px;
+  height: 120px;
+  background: var(--theme-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 auto var(--space-4);
+}
+
+.profile-position {
+  color: var(--theme-primary);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+
+.profile-department {
+  color: var(--gray-500);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-4);
+}
+
+.profile-contact {
+  text-align: left;
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--gray-200);
+}
+
+.profile-contact p {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-2);
+  color: var(--gray-600);
+}
+
+.profile-main {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-section {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.profile-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.profile-section h3 {
+  margin-bottom: var(--space-3);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--theme-text);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag {
+  background: var(--primary-100);
+  color: var(--primary-700);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+}
+
+.courses-list {
+  list-style: none;
+  padding: 0;
+}
+
+.courses-list li {
+  padding: var(--space-1) 0;
+  color: var(--gray-700);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .appointment-item {
+    flex-direction: column;
+  }
+  
+  .appointment-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .calendar-day {
+    min-height: 80px;
+  }
+  
+  .day-appointment {
+    display: none;
+  }
+  
+  .faculty-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

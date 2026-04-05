@@ -1,0 +1,128 @@
+/* Footer Styles */
+.footer {
+  background: var(--theme-footer-bg, #1f2937);
+  color: var(--theme-text-secondary, #9ca3af);
+  margin-top: auto;
+  border-top: 1px solid var(--theme-border, #e5e7eb);
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 1rem;
+  color: var(--theme-text, #111827);
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--theme-primary, #4f46e5);
+}
+
+.footer-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-200, #e5e7eb);
+  border-radius: 50%;
+  color: var(--gray-600, #4b5563);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--theme-primary, #4f46e5);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--theme-text-secondary, #6b7280);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--theme-primary, #4f46e5);
+}
+
+.footer-contact li {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: var(--theme-text-secondary, #6b7280);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--theme-border, #e5e7eb);
+  font-size: 0.75rem;
+}
+
+.footer-made-with {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.heart-icon {
+  color: #ef4444;
+  animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 2rem 1.5rem;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+}
