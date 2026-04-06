@@ -48,6 +48,11 @@
   max-width: 32rem;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .profile-form {
+    display: none;
+  }
+}
 
 .profile-image {
   display: flex;

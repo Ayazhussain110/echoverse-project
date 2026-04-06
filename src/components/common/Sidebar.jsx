@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { 
   FiHome, FiUser, FiFileText, FiCalendar, FiBell, 
@@ -45,11 +45,7 @@ const Sidebar = ({ role, isOpen }) => {
 
   return (
     <aside className={`sidebar ${isOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
-      <div className="sidebar-header">
-        <h1 className={`sidebar-logo ${!isOpen ? 'logo-hidden' : ''}`}>
-          EchoVerse
-        </h1>
-      </div>
+     
       
       <nav className="sidebar-nav">
         {menuItems.map((item) => (
